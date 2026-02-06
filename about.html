@@ -4,26 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link href="about.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
+        <h1>Welcome to my Portfolio!</h1>
         <nav>
             <ul>
-                <li>About Me</li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="navlink"><a href="#about">About Me</a></li>
+                <li class="navlink"><a href="#projects">Projects</a></li>
+                <li class="navlink"><a href="#resume">Resume</a></li>
+                <li class="navlink"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="about">
+        <section id="about" class="about">
             <h2>Curious about me?</h2>
             <p>Hi there! I am Vigo King, a Computer Science Undergraduate from NUS. I specialize in 
                 Artificial Intelligence (AI) and Database System.</p>
-            <p>Oh I also minored in Data Analytics :p</p>
+            <p>Oh Im also pursuing minor in Data Analytics :p</p>
         </section>
+        <hr>
+        <section id="projects" class="projects">
+            <h2>Here are my Projects! :D</h2>
+            <article>
+                <h3>ClientCore - AddressBook for Financial Advisors | CS2103T</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas.</p>
+            </article>
+            <article>
+                <h3>Falco - Personal Chatbot for TaskList | CS2103T</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+            quidem voluptatum quas.</p>
+            </article>
+        </section>
+        <hr>
+        <section id="resume" class="resume">
+            <h2>Curious about my Resume?</h2>
+            <ul class="resume-list">
+                <li>Resume 1: Software Engineer</li>
+                <li>Resume 2: Full Stack Developer</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="contact" class="contact">
+            <h2>Feel free to contact me!</h2>
+            <address>
+                <p>Phone: <a href="tel:94540609">9454 0609</a></p>
+                <p>Email: <a href="emailto:e1375607@u.nus.edu">e1375607@u.nus.edu</a></p>
+            </address>
+        </section>
+        
     </main>
 </body>
 </html>

@@ -1,0 +1,83 @@
+/** For header parts **/
+header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 15px;
+    background-color: darkgreen;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav h1 {
+    padding-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0px;
+    margin: 25px;
+}
+
+.navlink {
+    background-color: burlywood;
+    padding: 20px;
+    background
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/** For body parts **/
+body {
+    background-color:black;
+}
+
+body p, h2, h3, li {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px; 
+    color: white;
+}
+
+.resume-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+h3 {
+    margin-left: 40px;
+    padding: 25px;
+}
+
+    /** About part **/
+    .about {
+        padding:40px;
+    }
+
+    /** Projects part **/
+    .projects {
+        padding:40px;
+    }
+
+    /** Resume part **/
+    .resume {
+        padding:40px;
+    }
+
+    /** Contact part **/
+    .contact {
+        padding:40px;
+    }
+
