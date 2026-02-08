@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vigo King Portfolio</title>
-    <link href="index.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <h1>Vigo King</h1>
-        <p>Computer Science Undergraduate | AI & Database Systems | Minor in Data Analytics</p>
+        <p>CS Undergraduate @ NUS | AI & Database Systems | Minor in Data Analytics</p>
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -20,28 +20,77 @@
             </ul>
         </nav>
     </header>
-   
+
+   <!-- MAIN -->
     <main>
         <!-- ABOUT SECTION -->
         <section id="about" class="section about">
             <h2>About Me</h2>
             <p>Hi there! I am Vigo King, a Computer Science Undergraduate from NUS. I specialize in 
                 Artificial Intelligence (AI) and Database System.</p>
-            <p>Im also pursuing minor in Data Analytics :p</p>
+            <p>I'm also pursuing minor in Data Analytics!</p>
         </section>
         
         <!-- PROJECTS SECTION -->
         <section id="projects" class="section projects">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <article class="projects-card">
-                    <h3>ClientCore - Address Book Manager</h3>
-                    <p>An address book manager catered to Financial Advisor to manage their clients.</p>
+                <!-- Project 1-->
+                <article class="project-card">
+                    <div class="project-image-container" data-index="0">
+                        <div class="image-wrapper">
+                            <img src="assets/projects/clientcore0.png" alt="ClientCore Dashboard" class="active">
+                            <img src="assets/projects/clientcore1.png" alt="ClientCore List Package">
+                            <img src="assets/projects/clientcore2.png" alt="Command Line Part">
+                            <img src="assets/projects/clientcore3.png" alt="Contact Info">
+
+                            <div class="overlay">                 
+                                <p>ClientCore - Helps manage Financial Advisors clients.</p>
+                            </div>
+                        </div>
+
+                        <!-- arrows -->
+                        <button class="arrow left">&#10094;</button>
+                        <button class="arrow right">&#10095;</button>
+
+                        <!-- dots -->
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        
+                    </div>
+                    <h3>ClientCore - Address Book Manager</h3>   
                 </article>
-                <article class="projects-card">
+
+                <!-- Project 2-->
+                <article class="project-card">
+                    <div class="project-image-container" data-index="0">
+                        <div class="image-wrapper">
+                            <img src="assets/projects/falco0.png" alt="Chat Overview" class="active">
+                            <img src="assets/projects/falco1.png" alt="Falco Bot Responding">
+                            <img src="assets/projects/falco2.png" alt="User command">
+
+                            <div class="overlay">
+                                <p>Falco - Personal Chatbot to track your tasks, events, and meetings.  </p>
+                            </div>
+                        </div>  
+
+                        <!-- arrows -->
+                        <button class="arrow left">&#10094;</button>
+                        <button class="arrow right">&#10095;</button>
+
+                        <!-- dots -->
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                     <h3>Falco - A Personal Chatbot</h3>
-                    <p>A personal chatbot called Falco. Made to track your to-do list whether it is events, 
-                        tasks, or meetings.</p>
                 </article>
             </div>
         </section>
@@ -50,8 +99,8 @@
         <section id="resume" class="section resume">
             <h2>Resume</h2>
             <ul class="resume-list">
-                <li><a href="#">Resume 1: Software Engineer</a></li>
-                <li><a href="#">Resume 2: Data Analyst</a></li>
+                <li><a href="#">Software Engineer</a></li>
+                <li><a href="#">Data Analyst</a></li>
             </ul>
         </section>
         
@@ -59,15 +108,19 @@
         <section id="contact" class="section contact">
             <h2>Contact Me</h2>
             <div class="contact-info">
-                <p>Phone: <a href="tel:94540609">9454 0609</a></p>
-                <p>Email: <a href="emailto:e1375607@u.nus.edu">e1375607@u.nus.edu</a></p>
+                <address>
+                    <p>Phone: <a href="tel:94540609">+65 9454 0609</a></p>
+                    <p>Email: <a href="emailto:e1375607@u.nus.edu">e1375607@u.nus.edu</a></p>
+                </address>
             </div>
         </section>
     </main>
+
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Vigo King. All Rights Reserved.</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

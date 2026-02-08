@@ -1,0 +1,281 @@
+/* ------------ VARIABLES ------------ */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #ff9800;
+    --accent-color: #2196f3;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0,0,0,0.5);
+}
+
+/* ------------ GLOBAL ------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* ------------ HEADER ------------ */
+
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #fff;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: #000;
+}
+
+nav a.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* ------------ SECTIONS ------------ */
+
+.section {
+    padding: 60px 20px;
+}
+
+.section p {
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px var(--card-shadow);
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 220px; /* fixed height for all project cards */
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+    display: none;
+}
+
+.project-image-container img.active {
+    display: block;
+}
+
+/* Overlay text */
+.project-image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.image-wrapper img.active {
+    display: block;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* ------------ ARROWS & DOTS ------------ */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background: rgba(255,255,255,0.8);
+    color: black;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* ------------ RESUME ------------ */
+
+.resume-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 30px;
+}
+
+.resume-list li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resume-list li a {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.resume-list li a:hover {
+    transform: scale(1.05);
+}
+
+/* ------------ CONTACT ------------ */
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ------------ FOOTER ------------ */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg);
+    margin-top: 40px;
+    color: #aaa;
+}
