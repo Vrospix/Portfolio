@@ -1,12 +1,18 @@
 /* ------------ VARIABLES ------------ */
 :root {
-    --primary-color: #4caf50;
-    --secondary-color: #ff9800;
-    --accent-color: #2196f3;
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --card-bg: #1e1e1e;
-    --card-shadow: rgba(0,0,0,0.5);
+    --bg-gradient: linear-gradient(
+        135deg,
+        #020617 0%,
+        #0f172a 35%,
+        #1e293b 70%,
+        #020617 100%
+    );
+    --card-bg: rgba(17, 24, 39, 0.85);
+    --text-color: #e5e7eb;
+    --muted-text: #9ca3af;
+    --accent-color: #38bdf8;   
+    --accent-hover: #0ea5e9;
+    --border-color: rgba(255,255,255,0.08);
 }
 
 /* ------------ GLOBAL ------------ */
@@ -19,7 +25,9 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background:
+        radial-gradient(circle at top, rgba(56,189,248,0.12), transparent 40%),
+        var(--bg-gradient);
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -38,8 +46,8 @@ a {
 header {
     text-align: center;
     padding: 60px 20px 40px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: #fff;
+    background: transparent;
+    border-bottom: 1px solid var(--border-color);
 }
 
 header p {
@@ -62,17 +70,16 @@ nav ul li {
 nav ul li a {
     padding: 10px 15px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: color 0.2s ease;
+    color: var(--muted-text);
 }
 
 nav ul li a:hover {
-    background-color: var(--secondary-color);
-    color: #000;
+    color: var(--accent-color);
 }
 
 nav a.active {
-    background-color: var(--accent-color);
-    color: #fff;
+    color: var(--accent-color);
 }
 
 /* ------------ SECTIONS ------------ */
@@ -94,9 +101,10 @@ nav a.active {
 
 .project-card {
     background-color: var(--card-bg);
-    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     overflow: hidden;
-    box-shadow: 0 8px 20px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -185,9 +193,13 @@ nav a.active {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
+    background: linear-gradient(
+        135deg,
+        rgba(56,189,248,0.9),
+        rgba(14,165,233,0.9)
+    );
+    color: #020617;
     border: none;
-    color: white;
     font-size: 20px;
     padding: 8px 12px;
     cursor: pointer;
@@ -221,13 +233,14 @@ nav a.active {
 .dot {
     width: 10px;
     height: 10px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.35);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .dot.active {
-    background: white;
+    background: var(--accent-color);
+    box-shadow: 0 0 8px rgba(56,189,248,0.8);
 }
 
 /* ------------ RESUME ------------ */
@@ -246,16 +259,19 @@ nav a.active {
 }
 
 .resume-list li a {
-    background-color: var(--secondary-color);
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
     padding: 10px 20px;
     border-radius: 5px;
-    color: #000;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .resume-list li a:hover {
     transform: scale(1.05);
+    background-color: var(--accent-color);
+    color: #000;
 }
 
 /* ------------ CONTACT ------------ */
