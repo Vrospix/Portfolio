@@ -90,6 +90,8 @@ nav a.active {
 
 .section p {
     text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .projects-grid {
@@ -99,6 +101,7 @@ nav a.active {
     margin-top: 40px;
 }
 
+/* Project Card */
 .project-card {
     background-color: var(--card-bg);
     backdrop-filter: blur(8px);
@@ -113,10 +116,16 @@ nav a.active {
     box-shadow: 0 12px 25px var(--card-shadow);
 }
 
+.project-card:hover .arrow{
+    opacity: 1;
+    pointer-events: auto;   
+}
+
+/* Project image container */
 .project-image-container {
     position: relative;
-    width: 100%;
-    height: 220px; /* fixed height for all project cards */
+    aspect-ratio: 16 / 10;
+    height: auto;
     overflow: hidden;
     background-color: #000;
     border-radius: 10px;
@@ -134,7 +143,6 @@ nav a.active {
     display: block;
 }
 
-/* Overlay text */
 .project-image-container .overlay {
     position: absolute;
     top: 0;
@@ -151,6 +159,7 @@ nav a.active {
     transition: opacity 0.3s;
 }
 
+/* Overlay text */
 .overlay {
     position: absolute;
     inset: 0;
@@ -166,6 +175,7 @@ nav a.active {
     pointer-events: none;
 }
 
+/* Image Wrapper */
 .image-wrapper {
     position: relative;
     width: 100%;
@@ -183,7 +193,7 @@ nav a.active {
     display: block;
 }
 
-.image-wrapper:hover .overlay {
+.image-wrapper img:hover ~ .overlay {
     opacity: 1;
 }
 
@@ -193,18 +203,34 @@ nav a.active {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border: none;
+    z-index: 2;
+
     background: linear-gradient(
         135deg,
         rgba(56,189,248,0.9),
         rgba(14,165,233,0.9)
     );
     color: #020617;
-    border: none;
-    font-size: 20px;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 2;
+    font-size: 18px;
+    
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.25);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    opacity: 0;
+    pointer-events: none;
 }
 
 .arrow.left {
@@ -216,8 +242,14 @@ nav a.active {
 }
 
 .arrow:hover {
-    background: rgba(255,255,255,0.8);
-    color: black;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow:
+        0 10px 22px rgba(0,0,0,0.45),
+        inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+
+.arrow:active{
+    transform: translateY(-50%) scale(0.95);
 }
 
 .dots {
